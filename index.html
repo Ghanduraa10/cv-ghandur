@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Ghandur Athallah Alparis — CV</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #0e0e0e;
+    --ink-mid: #3a3a3a;
+    --ink-light: #6b6b6b;
+    --accent: #c8a96e;
+    --accent2: #1a1a2e;
+    --bg: #f8f5ef;
+    --white: #ffffff;
+    --rule: #d4cfc7;
+    --tag-bg: #1a1a2e;
+    --tag-txt: #c8a96e;
+  }
+
+  @media print {
+    body { background: white; }
+    .page { box-shadow: none; margin: 0; max-width: none; border-radius: 0; }
+    .sidebar { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .tag { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+  }
+
+  .page {
+    width: 900px;
+    max-width: 100%;
+    background: var(--white);
+    box-shadow: 0 20px 80px rgba(0,0,0,0.14), 0 4px 20px rgba(0,0,0,0.08);
+    border-radius: 4px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    animation: fadeUp .5s ease both;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── SIDEBAR ── */
+  .sidebar {
+    background: var(--accent2);
+    color: #e8e4dc;
+    padding: 48px 28px 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .avatar-wrap {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent2);
+    letter-spacing: -1px;
+    flex-shrink: 0;
+  }
+
+  .s-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+
+  .s-title {
+    font-size: 11.5px;
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+
+  .s-section {
+    margin-bottom: 30px;
+  }
+
+  .s-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border-bottom: 1px solid rgba(200,169,110,.25);
+    padding-bottom: 6px;
+    margin-bottom: 14px;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #c5bfb5;
+    line-height: 1.4;
+  }
+  .contact-item svg { flex-shrink: 0; margin-top: 1px; opacity: .7; }
+  .contact-item a { color: #c5bfb5; text-decoration: none; }
+  .contact-item a:hover { color: var(--accent); }
+
+  .tag {
+    display: inline-block;
+    background: rgba(200,169,110,.15);
+    color: var(--accent);
+    border: 1px solid rgba(200,169,110,.3);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    padding: 3px 9px;
+    border-radius: 2px;
+    margin: 3px 3px 3px 0;
+    letter-spacing: .03em;
+  }
+
+  .cert-item {
+    margin-bottom: 12px;
+  }
+  .cert-name {
+    font-size: 12px;
+    font-weight: 500;
+    color: #ddd8cf;
+    line-height: 1.4;
+    margin-bottom: 2px;
+  }
+  .cert-issuer {
+    font-size: 10.5px;
+    color: #8a8578;
+  }
+
+  /* ── MAIN ── */
+  .main {
+    padding: 48px 44px 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  /* Hero */
+  .hero {
+    margin-bottom: 36px;
+  }
+  .hero-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 900;
+    color: var(--ink);
+    line-height: 1;
+    letter-spacing: -1.5px;
+    margin-bottom: 6px;
+  }
+  .hero-name span { color: var(--accent); }
+  .hero-role {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ink-light);
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  .hero-bar {
+    width: 48px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 2px;
+    margin-bottom: 18px;
+  }
+  .hero-summary {
+    font-size: 13.5px;
+    color: var(--ink-mid);
+    line-height: 1.75;
+    max-width: 520px;
+    font-weight: 300;
+  }
+
+  /* Section */
+  .section {
+    margin-bottom: 34px;
+  }
+  .section-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .section-head h2 {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+  }
+  .section-head::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+
+  /* Experience card */
+  .exp-card {
+    margin-bottom: 26px;
+    padding-left: 16px;
+    border-left: 2px solid var(--rule);
+    transition: border-color .2s;
+  }
+  .exp-card:hover { border-left-color: var(--accent); }
+
+  .exp-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 2px;
+  }
+  .exp-company {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--ink);
+  }
+  .exp-date {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--ink-light);
+    letter-spacing: .04em;
+    flex-shrink: 0;
+  }
+  .exp-role {
+    font-size: 12px;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-style: italic;
+  }
+  .exp-sub {
+    font-size: 11.5px;
+    font-weight: 500;
+    color: var(--ink-mid);
+    margin: 8px 0 6px;
+    letter-spacing: .02em;
+  }
+  .exp-bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .exp-bullets li {
+    font-size: 12.5px;
+    color: var(--ink-mid);
+    line-height: 1.6;
+    padding-left: 14px;
+    position: relative;
+    font-weight: 300;
+  }
+  .exp-bullets li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 10px;
+    top: 3px;
+  }
+
+  /* Education */
+  .edu-card {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4px 16px;
+    margin-bottom: 18px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .edu-card:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .edu-school { font-weight: 600; font-size: 13.5px; color: var(--ink); }
+  .edu-date { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--ink-light); text-align: right; }
+  .edu-degree { font-size: 12px; color: var(--accent); font-style: italic; font-weight: 400; grid-column: 1; }
+  .edu-detail { font-size: 11.5px; color: var(--ink-light); grid-column: 1/-1; font-weight: 300; line-height: 1.5; margin-top: 4px; }
+
+  /* Portfolio */
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .portfolio-card {
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 14px 16px;
+    transition: border-color .2s, box-shadow .2s;
+  }
+  .portfolio-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 4px 16px rgba(200,169,110,.1);
+  }
+  .portfolio-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .portfolio-title a { color: inherit; text-decoration: none; }
+  .portfolio-title a:hover { color: var(--accent); }
+  .ext-icon { opacity: .4; font-size: 10px; }
+  .portfolio-stack {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--ink-light);
+    letter-spacing: .03em;
+  }
+
+  /* Additional */
+  .add-card {
+    background: #fafafa;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 16px 20px;
+  }
+  .add-title { font-weight: 600; font-size: 13.5px; color: var(--ink); margin-bottom: 2px; }
+  .add-sub { font-size: 11.5px; color: var(--accent); font-style: italic; margin-bottom: 8px; }
+  .add-desc { font-size: 12.5px; color: var(--ink-mid); line-height: 1.65; font-weight: 300; }
+
+  @media (max-width: 700px) {
+    .page { grid-template-columns: 1fr; }
+    .sidebar { padding: 36px 24px; }
+    .portfolio-grid { grid-template-columns: 1fr; }
+    .hero-name { font-size: 30px; }
+    .main { padding: 36px 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="avatar-wrap">GA</div>
+    <div class="s-name">Ghandur Athallah Alparis</div>
+    <div class="s-title">Full-Stack Developer</div>
+
+    <div class="s-section">
+      <div class="s-label">Contact</div>
+      <div class="contact-item">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Jakarta, Indonesia
+      </div>
+      <div class="contact-item">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91A16 16 0 0016.09 17.09l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <a href="tel:+6281259419668">+62 812 5941 9668</a>
+      </div>
+      <div class="contact-item">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <a href="mailto:ghandurathallah10@gmail.com">ghandurathallah10@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        <a href="https://linkedin.com/in/ghandurathallahalparis/" target="_blank">LinkedIn</a>
+      </div>
+      <div class="contact-item">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+        <a href="https://github.com/Ghanduraa10" target="_blank">github.com/Ghanduraa10</a>
+      </div>
+    </div>
+
+    <div class="s-section">
+      <div class="s-label">Languages</div>
+      <span class="tag">JavaScript</span>
+      <span class="tag">TypeScript</span>
+      <span class="tag">C#</span>
+      <span class="tag">SQL</span>
+      <span class="tag">HTML/CSS</span>
+    </div>
+
+    <div class="s-section">
+      <div class="s-label">Front-End</div>
+      <span class="tag">React JS</span>
+      <span class="tag">Next.js</span>
+      <span class="tag">AngularJS</span>
+      <span class="tag">jQuery</span>
+    </div>
+
+    <div class="s-section">
+      <div class="s-label">Back-End & DB</div>
+      <span class="tag">Node.js</span>
+      <span class="tag">NestJS</span>
+      <span class="tag">ASP.NET</span>
+      <span class="tag">MSSQL</span>
+      <span class="tag">PostgreSQL</span>
+      <span class="tag">Supabase</span>
+    </div>
+
+    <div class="s-section">
+      <div class="s-label">DevOps & Tools</div>
+      <span class="tag">Git</span>
+      <span class="tag">AWS</span>
+      <span class="tag">Vercel</span>
+      <span class="tag">Firebase</span>
+      <span class="tag">Railway</span>
+    </div>
+
+    <div class="s-section">
+      <div class="s-label">Certifications</div>
+      <div class="cert-item">
+        <div class="cert-name">ASP.NET Core MVC & EF</div>
+        <div class="cert-issuer">Udemy · March 2024</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-name">Introduction to Web Development</div>
+        <div class="cert-issuer">Pacmann Academy · January 2024</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-name">Fullstack JavaScript Immersive</div>
+        <div class="cert-issuer">Hacktiv8 Indonesia · July 2023</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-name">Advanced PLC Operations</div>
+        <div class="cert-issuer">ID: C383.08321.2022 · Nov 2022</div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="hero-name">Ghandur <span>Athallah</span><br/>Alparis</div>
+      <div class="hero-role">Full-Stack Developer · Software Engineer</div>
+      <div class="hero-bar"></div>
+      <div class="hero-summary">
+        Electronics engineer turned full-stack developer with production experience across front-end, backend, and database systems. Delivered end-to-end web solutions for enterprise clients — from pixel-perfect UI to RESTful APIs and optimized SQL Server schemas. Passionate about building systems that are fast, clean, and scalable.
+      </div>
+    </div>
+
+    <!-- Experience -->
+    <div class="section">
+      <div class="section-head"><h2>Experience</h2></div>
+
+      <div class="exp-card">
+        <div class="exp-top">
+          <div class="exp-company">PT Tusam Hutani Lestari</div>
+          <div class="exp-date">March 2025 — Present</div>
+        </div>
+        <div class="exp-role">IT Support · Admin Staff &nbsp;·&nbsp; Jakarta, Indonesia</div>
+        <ul class="exp-bullets">
+          <li>Delivered technical support and troubleshooting across hardware, software, and network infrastructure.</li>
+          <li>Installed, configured, and maintained IT systems, devices, and enterprise applications.</li>
+          <li>Ensured smooth daily IT operations including user support and proactive system monitoring.</li>
+          <li>Maintained IT documentation, asset reports, and inventory records.</li>
+        </ul>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-top">
+          <div class="exp-company">PT Rekan Andalan Sukses</div>
+          <div class="exp-date">June 2023 — December 2024</div>
+        </div>
+        <div class="exp-role">Software Engineer (Full-Stack) &nbsp;·&nbsp; Jakarta, Indonesia</div>
+
+        <div class="exp-sub">Electronic Manajemen Penyidik (EMP) &nbsp;·&nbsp; Feb 2024 – Dec 2024</div>
+        <ul class="exp-bullets">
+          <li>Redesigned and modernized the EMP application interface, significantly enhancing usability and overall user experience.</li>
+          <li>Developed robust backend systems using <strong>C# (ASP.NET)</strong>, implementing business logic to support electronic case investigation workflows.</li>
+          <li>Designed and maintained <strong>SQL Server (MSSQL)</strong> databases — complex queries, stored procedures, and schema optimization for performance and integrity.</li>
+          <li>Built and integrated RESTful APIs to bridge front-end and backend services, enabling a scalable system architecture.</li>
+          <li>Partnered with analysts and stakeholders to translate business requirements into reliable technical solutions.</li>
+          <li>Drove continuous improvement through debugging, performance tuning, and proactive maintenance of full-stack components.</li>
+        </ul>
+
+        <div class="exp-sub" style="margin-top:14px;">E-Kerma Team &nbsp;·&nbsp; June 2023 – Jan 2024</div>
+        <ul class="exp-bullets">
+          <li>Translated UI/UX designs into responsive, pixel-perfect web interfaces using <strong>HTML, CSS, and JavaScript</strong> — seamless across all major browsers.</li>
+          <li>Integrated front-end interfaces with backend systems via RESTful APIs in close collaboration with the backend team.</li>
+          <li>Researched and adopted emerging front-end technologies to continuously elevate code quality and project standards.</li>
+        </ul>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-top">
+          <div class="exp-company">PDAM Kota Malang</div>
+          <div class="exp-date">June 2021 — September 2021</div>
+        </div>
+        <div class="exp-role">Engineering Intern &nbsp;·&nbsp; Malang, Indonesia</div>
+        <ul class="exp-bullets">
+          <li>Built a smartphone-connected data logger to remotely monitor pipe pressure at Istana Dieng Estate, Malang.</li>
+          <li>Studied SCADA design principles applied to citywide pipe infrastructure.</li>
+          <li>Gained hands-on experience in electronics wiring, design, maintenance, and repair.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="section">
+      <div class="section-head"><h2>Education</h2></div>
+
+      <div class="edu-card">
+        <div class="edu-school">Hacktiv8 Indonesia</div>
+        <div class="edu-date">Jan 2023 – May 2023</div>
+        <div class="edu-degree">Full-Stack JavaScript Immersive Program &nbsp;·&nbsp; 79.3 / 100</div>
+        <div class="edu-detail">Fundamental Programming · OOP · MVP Development · Application Architecture · Final Project: Packer (Backend Contributor)</div>
+      </div>
+
+      <div class="edu-card">
+        <div class="edu-school">State Polytechnic of Malang</div>
+        <div class="edu-date">Aug 2018 – Aug 2022</div>
+        <div class="edu-degree">Bachelor of Electronics Engineering &nbsp;·&nbsp; GPA 3.32 / 4.00</div>
+        <div class="edu-detail">Analog · Digital · Power Electronics · Control Systems · Robotics &nbsp;|&nbsp; Thesis: Perturb & Observe on PV Series with Partial Shading & Sepic Topology Converter</div>
+      </div>
+    </div>
+
+    <!-- Portfolio -->
+    <div class="section">
+      <div class="section-head"><h2>Portfolio</h2></div>
+      <div class="portfolio-grid">
+        <div class="portfolio-card">
+          <div class="portfolio-title">
+            <a href="https://mirzuno-client-site-yqsh.vercel.app/" target="_blank">Sistem Informasi Produksi Getah</a>
+            <span class="ext-icon">↗</span>
+          </div>
+          <div class="portfolio-stack">TypeScript · Next.js · Supabase · Vercel</div>
+        </div>
+        <div class="portfolio-card">
+          <div class="portfolio-title">
+            <a href="https://mirzuno-client-site-yqsh.vercel.app/" target="_blank">Mirzuno Company Profile</a>
+            <span class="ext-icon">↗</span>
+          </div>
+          <div class="portfolio-stack">TypeScript · Next.js · Supabase · Vercel</div>
+        </div>
+        <div class="portfolio-card">
+          <div class="portfolio-title">
+            <a href="https://www.tusamhutanlestari.com/" target="_blank">Tusam Hutani Lestari Site</a>
+            <span class="ext-icon">↗</span>
+          </div>
+          <div class="portfolio-stack">TypeScript · Next.js · Supabase · Vercel</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Additional -->
+    <div class="section">
+      <div class="section-head"><h2>Additional</h2></div>
+      <div class="add-card">
+        <div class="add-title">TNI (Indonesian National Armed Forces) — Recruitment</div>
+        <div class="add-sub">Reached Final Central Selection Stage (Pantukhir Pusat) &nbsp;·&nbsp; Oct – Dec 2024 &nbsp;·&nbsp; Jakarta</div>
+        <div class="add-desc">Advanced through all regional-level assessments — physical, medical, academic, and mental evaluations — to reach the national final selection stage. The experience sharpened discipline, perseverance, and resilience under sustained pressure.</div>
+      </div>
+    </div>
+
+  </main>
+</div>
+</body>
+</html>
